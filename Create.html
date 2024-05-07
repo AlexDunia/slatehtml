@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  background:#0F141A;
+  color:white;
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  font-style: normal;
+}
+
+input{
+    background:none;
+    color:white;
+}
+
+.ppbg {
+  height: 100vh;
+  flex: 1;
+  width: 100%;
+  padding-left: 124px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ppflex {
+  display: flex;
+}
+
+.vapptext {
+  margin-top: 200px;
+  font-weight: 800;
+  color: white;
+  font-size: 32px;
+  width:70%;
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  line-height: 2.3rem;
+}
+
+.cimg {
+  margin-top: 34px;
+  width: 120px;
+}
+
+.mycoform {
+  padding-top: 90px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.mycoform h4 {
+  margin-bottom: 5px;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.pform {
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+
+.mycoform form input {
+  outline: 0;
+  padding-left: 0;
+  color:white;
+  margin-left: 0;
+  padding-bottom: 0;
+  padding-top: 20px;
+  border-width: 0 0 1px;
+  border-color: rgba(250, 250, 250, 0.1);
+}
+
+.mycoform form input:focus {
+  border-color: green;
+}
+
+.mycoform form input::placeholder {
+  font-size: 15px;
+  font-weight: 300;
+  color: #1e1e1e;
+}
+
+.formname {
+  padding: 15px;
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.checkout button {
+  background: #F99523;
+  color: white;
+  border: 0;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  margin: auto;
+  text-align: center;
+  padding-left: 155px;
+  padding-right: 155px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.createflex {
+  display: flex;
+  margin: auto;
+  width: 100%;
+}
+
+.createflex p {
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.gogglesignup {
+  background: transparent;
+  color: #161616;
+  border: 1px solid hsl(246, 19%, 80%);
+  padding-top: 13.4px;
+  padding-bottom: 13.4px;
+  padding-left: 127px;
+  padding-right: 127px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  margin: auto;
+  margin-top: -5px;
+}
+
+.createflex img {
+  width: 30px;
+}
+
+
+.mycoform form input::placeholder {
+  color: white;
+}
+
+
+@media (max-width: 900px) {
+  .ppflex {
+    display: block;
+  }
+
+  .ppbg {
+    background-position: center center;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+    padding: 30px 0 120px 0;
+  }
+
+  .vapptext {
+    margin-top: 100px;
+    font-weight: 700;
+    color: white;
+    font-size: 28px;
+    padding-left: 40px;
+    padding-right: 40px;
+    line-height: 3rem;
+  }
+
+  .cimg {
+    margin-top: 34px;
+    width: 170px;
+    margin-left: 40px;
+  }
+
+  br {
+    display: none;
+  }
+
+  .mycoform {
+    padding-top: 90px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .checkout button {
+    border: 0.4px solid #504d4d;
+    opacity: 0.3;
+    padding: 20px;
+  }
+
+  .cartcontainer {
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    padding-right: 25px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Second Hero Begins here -->
+  <div class="ppflex">
+    <div class="ppbg" style="background-image: url('Images/v.jpg');">
+      <div class="clogo">
+        <img src="images/slate.png" alt="Company Logo" class="cimg">
+      </div>
+      <h2 class="vapptext"> Real time activity log now
+        available on Amazon </h2>
+    </div>
+
+    <div class="mycoform">
+      <h4> Create account </h4>
+      <p class="pform"> Let's get started on your journey to great success </p>
+
+      <form id="paymentForm">
+        <input class="formname" name="name" type="text" placeholder="Name"> <br>
+        <input class="formname" name="email" type="email" placeholder="Email"> <br>
+        <input type="password" id="email-address" name="name" class="formname" placeholder="Password"> <br>
+
+        <div class="checkout">
+          <a href="/create">
+            <button type="button">Create account</button>
+          </a>
+        </div>
+
+        <!-- <button type="submit" class="gogglesignup">
+          <div class="createflex">
+            <div> <img src="../assets/Images/google.png" alt="Google Logo"> </div>
+            <div> <p> Sign up with Google </p> </div>
+          </div>
+        </button> -->
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

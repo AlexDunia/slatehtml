@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Sidebar</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="assets/img/favicon.ico" rel="icon">
+<link href="assets/img/apple-touch-icon.html" rel="apple-touch-icon">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/9ff47ec0f8.js" crossorigin="anonymous"></script>
+<style>
+/* Global styles */
+body {
+  margin: 0;
+  background:#17171C;
+  color:white;
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  font-style: normal;
+}
+
+button{
+  border:none;
+}
+
+.container {
+  display: flex;
+}
+
+.logo{
+    margin-top:50px;
+    display: flex;
+    justify-content: center;
+}
+
+input[type="text"]::-webkit-input-placeholder {
+
+  opacity: 0.1; /* Default opacity */
+  padding: 5px;
+    font-weight: 300;
+    font-size: 20px;
+    color: white;
+}
+
+input[type="text"]::-moz-placeholder {
+  padding: 5px;
+    font-weight: 300;
+    font-size: 20px;
+    color: white;
+  opacity: 0.1; /* Default opacity */
+}
+
+input[type="text"]:-ms-input-placeholder {
+  padding: 5px;
+    font-weight: 300;
+    font-size: 17px;
+    color: white;
+  opacity: 0.1; /* Default opacity */
+}
+
+input[type="text"]:focus::-webkit-input-placeholder,
+input[type="text"]:focus::-moz-placeholder,
+input[type="text"]:focus:-ms-input-placeholder {
+  padding: 5px;
+    font-weight: 300;
+    font-size: 20px;
+    color: white;
+  opacity: 0.1; /* Restore full opacity when focused */
+}
+
+
+.sidebar {
+  width: 250px;
+  background-color: #232F3E;
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+}
+
+.sidebar ul {
+  /* margin: auto;
+  width: 70%; */
+  margin-left:20px;
+  margin-top:90px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.fa-house{
+  color:#C8C8C8;
+}
+
+.fa-users{
+  color:#C8C8C8;
+}
+
+.fa-bell{
+  color:#C8C8C8;
+}
+.sidebar ul li {
+  margin-bottom: 15px;
+  padding:9px 20px 9px 25px;
+  border-radius:7px;
+}
+
+.sidebar ul li a {
+  color: white;
+  margin-left:14px;
+  font-weight:300;
+  font-size:17px;
+  letter-spacing:1px;
+  text-decoration: none;
+}
+
+.sidebar ul li:hover {
+  padding:9px 20px 9px 25px;
+  border-radius:7px;
+    background-color: #1D222C;
+    cursor: pointer;
+  }
+
+.registered-nav{
+  padding: 20px;
+}
+
+.registered-nav h1{
+  margin-bottom:-15px;
+  font-size:27px;
+  font-weight:400;
+}
+
+.lastname{
+  color:#F99523;
+  font-weight:700;
+}
+
+.registered-nav-flex{
+  display:flex;
+  width:65%;
+  margin-left: 360px;
+  padding-top: 20px;
+  align-items:center;
+  margin-top:15px;
+  justify-content: space-between;
+}
+
+.registered-nav-button button{
+  background:#F99523;
+  padding:20px 18px;
+  font-weight:600;
+  border-radius:5px;
+  font-size:18px;
+  color:white;
+}
+
+/* Line break */
+
+.line{
+  background: rgba(50, 58, 74, 0.5);
+  padding:1px;
+}
+
+/* create-task-prompt */
+
+.create-task-prompt{
+  margin-left: 350px;
+  margin-top:40px;
+}
+
+.innertaskprompt{
+  margin:auto;
+  width:56%;
+  text-align:center;
+  align-items:center;
+}
+
+.innertaskprompt h2{
+  font-weight:400;
+  margin-top:35px;
+  font-size:20px;
+}
+
+.innertaskprompt p{
+  font-weight:300;
+  letter-spacing:0.3px;
+  color:rgba(255, 255, 255, 0.8);
+  font-size:17px;
+}
+
+.circle {
+  width: 65px;
+  height: 65px;
+  margin:auto;
+  margin-bottom:-12px;
+  background-color: rgba(249, 149, 35, 0.2); /* Background color with 20% opacity */
+  border-radius: 50%; /* This makes it a perfect circle */
+  overflow: hidden; /* Ensures the image doesn't overflow the circle */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.circle img {
+  width: 50%; /* Set the width of the image to 40% of the circle */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.innertaskprompt button{
+  background:none;
+  border:1px solid #F99523;
+  border-radius:40px;
+  color:#F99523;
+  font-size:16px;
+  padding: 15px 20px;
+  font-weight: 500;
+  margin-top:10px;
+  border-radius: 5px;
+}
+
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: static;
+    height: auto;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="sidebar">
+    <div class="logo">
+    <img src="images/slate.png" width="130px">
+  </div>
+    <ul>
+      <li> <i class="fa-solid fa-house"></i> <a href="#"> Home</a></li>
+      <li> <i class="fa-solid fa-users"></i> <a href="#">Groups</a></li>
+      <li> <i class="fa-solid fa-bell"></i> <a href="#">Notifications</a></li>
+    </ul>
+  </div>
+
+  <div class="registered-nav-flex">
+  <div class="registered-nav">
+    <h1>Welcome, <span class="lastname"> Alex </span> </h1>
+    <p>Here you can create and see your tasks... </p>
+  </div>
+
+  <div class="registered-nav-button">
+    <button>
+     Create a new task
+    </button>
+  </div>
+  </div>
+  <!-- Break -->
+
+  </div>
+
+  <div class="line">
+  </div>
+
+  <!-- Create task prompt -->
+
+  <div class="create-task-prompt">
+    <div class="innertaskprompt">
+      <br>
+      <div class="circle"> <img src="https://res.cloudinary.com/dnuhjsckk/image/upload/v1712935524/task_y8vwej.png" alt="Your Alt Text Here"> </div>
+      <h2> You don’t have any task created </h2>
+      <p> You currently do not have any task. Boost your productivity by creating a task
+        and have your activities properly documented. </p>
+        <button>
+          Create a new task
+         </button>
+    </div>
+  </div>
+
+</body>
+</html>
